@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | Aquaculture Scientific</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<div class="page-hero"><div class="wrap"><h2>Create an account</h2><p>Authors, reviewers and readers use the same form.</p></div></div>
+<section class="section"><div class="wrap" style="max-width:720px">
+  <form class="card" data-form>
+    <div class="form-row">
+      <div><label>Username</label><input required placeholder="lowercase letters and numbers"></div>
+      <div><label>Password</label><input type="password" required minlength="6"></div>
+    </div>
+    <div class="form-row">
+      <div><label>Given name</label><input required></div>
+      <div><label>Family name</label><input required></div>
+    </div>
+    <label>Email</label><input type="email" required>
+    <label>Institution</label><input placeholder="Universidade Federal do Rio Grande do Sul">
+    <label>ORCID iD</label><input placeholder="https://orcid.org/0000-0002-1825-0097">
+    <label>Working language</label>
+    <select><option>English</option><option>Portuguese</option><option>Spanish</option></select>
+    <label>Roles</label>
+    <p><label style="font-weight:500"><input type="checkbox" checked style="width:auto"> Author (may submit)</label></p>
+    <p><label style="font-weight:500"><input type="checkbox" style="width:auto"> Reviewer</label></p>
+    <p><label style="font-weight:500"><input type="checkbox" style="width:auto"> Email me when a new issue appears</label></p>
+    <p><button class="cta navy" type="submit">Register</button></p>
+    <div class="okbox form-result" hidden></div>
+  </form>
+</div></section>
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+</body></html>

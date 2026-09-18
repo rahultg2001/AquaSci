@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browse by subject | Aquaculture Scientific</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<div class="page-hero"><div class="wrap"><h2>Browse by subject</h2><p>All fisheries and aquaculture fields are open.</p></div></div>
+<section class="section"><div class="wrap">
+  <div class="grid-3" id="subs"></div>
+</div></section>
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+<script>
+const items = [
+  ["Freshwater aquaculture","Ponds, cages, tanks and raceways for inland species including tilapia, tambaqui, carp, catfish and trout."],
+  ["Mariculture","Marine and brackish systems: cages, longlines, integrated multi-trophic aquaculture."],
+  ["Shrimp and crustaceans","Penaeid shrimp, prawns, crabs and crayfish — hatchery through grow-out."],
+  ["Mollusc culture","Oysters, mussels, scallops, clams and other bivalves and gastropods."],
+  ["Seaweed and algae","Macroalgae, microalgae, pigments and extractives."],
+  ["Ornamental fish","Aquarium species, welfare and trade."],
+  ["Fish nutrition and feed","Ingredients, formulations, digestibility, alternatives to fishmeal and fish oil."],
+  ["Aquatic animal health","Pathogens, diagnostics, vaccines, biosecurity and veterinary care."],
+  ["Welfare and husbandry","Stocking, handling, slaughter and behavioural indicators."],
+  ["Genetics and breeding","Selective breeding, genomics, sex control and reproduction."],
+  ["Larviculture and hatchery","Live feeds, larval quality and early development."],
+  ["Water quality and environment","Physicochemistry, effluents, carrying capacity and restoration."],
+  ["RAS and engineering","Recirculation, biofilters, sensors, energy and farm design."],
+  ["Capture fisheries","Gear, effort, stock assessment and small-scale fisheries."],
+  ["Fisheries management","Rights, co-management, MPAs and harvest control."],
+  ["Aquatic ecology","Food webs, habitats and species interactions that bound production."],
+  ["Climate and risk","Warming, hypoxia, acidification, extreme events and adaptation."],
+  ["Post-harvest and safety","Processing, cold chain, residues and product quality."],
+  ["Socioeconomics","Markets, labour, gender, livelihoods and value chains."],
+  ["Policy and law","Licensing, zoning, certification and public programmes."],
+  ["One Health and AMR","Antimicrobial use, residues and shared human–animal risks."],
+  ["Indigenous and traditional knowledge","Fishing and farming knowledge with community consent."]
+];
+document.getElementById("subs").innerHTML = items.map(([t,d]) => {
+  const id = t.toLowerCase().replace(/[^a-z]+/g,"-");
+  return `<article class="card subject" id="${id}"><h3>${t}</h3><p>${d}</p><p><a href="submit.html">Submit in this field</a></p></article>`;
+}).join("");
+</script>
+</body></html>

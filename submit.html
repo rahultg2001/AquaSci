@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submit manuscript | Aquaculture Scientific</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<div class="page-hero"><div class="wrap"><h2>Submit manuscript</h2><p>English-language papers only. Use the official Word template.</p></div></div>
+<section class="section"><div class="wrap grid-2">
+  <form class="card" data-form>
+    <h3>Submission form</h3>
+    <p class="hint">This page is a front-end demo. Hook it to OJS or email when you host the site.</p>
+    <div class="form-row">
+      <div><label>Corresponding author</label><input name="name" required placeholder="Full name"></div>
+      <div><label>Email</label><input type="email" name="email" required></div>
+    </div>
+    <div class="form-row">
+      <div><label>Institution</label><input name="org" required></div>
+      <div><label>Country</label><input name="country" required placeholder="Brazil"></div>
+    </div>
+    <label>ORCID iD</label>
+    <input name="orcid" placeholder="https://orcid.org/0000-0000-0000-0000">
+    <label>Article type</label>
+    <select name="type" required>
+      <option value="">Select type</option>
+      <option>Original research</option>
+      <option>Long review / monograph article</option>
+      <option>Review / systematic review</option>
+      <option>Book chapter</option>
+      <option>Methods / protocol</option>
+      <option>Case study</option>
+      <option>Data paper</option>
+      <option>Short communication</option>
+      <option>Extension / practice paper</option>
+      <option>Technical note</option>
+      <option>Perspective / opinion</option>
+      <option>Brief report</option>
+      <option>Popular article</option>
+      <option>Photo note / illustrated note</option>
+      <option>Comment / correspondence</option>
+      <option>Other (describe in cover letter)</option>
+    </select>
+    <label>Primary subject</label>
+    <select name="subject">
+      <option>Freshwater aquaculture</option>
+      <option>Mariculture</option>
+      <option>Shrimp and crustaceans</option>
+      <option>Fish nutrition and feed</option>
+      <option>Aquatic animal health</option>
+      <option>Genetics and breeding</option>
+      <option>RAS and engineering</option>
+      <option>Capture fisheries</option>
+      <option>Socioeconomics</option>
+      <option>Other fisheries field</option>
+    </select>
+    <label>Title</label>
+    <input name="title" required>
+    <label>Abstract</label>
+    <textarea name="abstract" required placeholder="200–250 words for research articles"></textarea>
+    <label>Cover letter</label>
+    <textarea name="cover" placeholder="Why this paper fits Aquaculture Scientific"></textarea>
+    <label>Manuscript (.docx)</label>
+    <input type="file" accept=".doc,.docx">
+    <p class="hint">Maximum 20 MB. Figures may be embedded or uploaded as a second zip.</p>
+    <label style="font-weight:500"><input type="checkbox" required style="width:auto"> I confirm the work is original, in English, and not under review elsewhere.</label>
+    <p><button class="cta navy" type="submit">Send submission</button></p>
+    <div class="okbox form-result" hidden></div>
+  </form>
+  <aside>
+    <div class="card">
+      <h3>Before you click</h3>
+      <p>1. Download the <a href="templates/AS-manuscript-template.docx">Word template</a>.<br>
+      2. Match the article-type guide.<br>
+      3. Add ethics and data statements.<br>
+      4. Expect a first decision in about 1 day.</p>
+    </div>
+    <div class="notice">APC is R$ 0 / US$ 0 / ₹ 0 until 31 December 2026. After acceptance you will still receive a zero-value invoice for the record.</div>
+    <div class="card">
+      <h3>Need an account?</h3>
+      <p><a href="register.html">Register as author or reviewer</a></p>
+    </div>
+  </aside>
+</div></section>
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+</body></html>
