@@ -26,7 +26,7 @@
       <div class="wrap">
         <div>ISSN (print): <b>****-****</b></div>
         <div>ISSN (online): <b>****-****</b></div>
-        <div>Porto Alegre, Brazil</div>
+        <div>International</div>
       </div>
     </div>
     <div class="brand-row">
