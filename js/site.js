@@ -78,8 +78,8 @@
         </div>
         <div>
           <h4>Contact</h4>
-          <p>editor@aquaculture-scientific.br<br>
-          submissions@aquaculture-scientific.br<br>
+          <p>editor@aquaculturescientific.com<br>
+          submissions@aquaculturescientific.com<br>
           +55 (51) 3300-0000</p>
         </div>
       </div>
