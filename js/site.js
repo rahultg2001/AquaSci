@@ -1,17 +1,18 @@
 (function () {
   const pages = [
-    ["index.html", "Home"],
-    ["aims.html", "Aims & scope"],
-    ["article-types.html", "Article types"],
-    ["subjects.html", "Subjects"],
-    ["issues.html", "Articles"],
-    ["calls.html", "Calls"],
-    ["apc.html", "APC & fees"],
-    ["authors.html", "Guide for authors"],
-    ["board.html", "Board"],
-    ["submit.html", "Submit"],
-    ["contact.html", "Contact"]
-  ];
+  ["index.html", "Home"],
+  ["aims.html", "Aims & scope"],
+  ["article-types.html", "Article types"],
+  ["subjects.html", "Subjects"],
+  ["issues.html", "Articles"],
+  ["calls.html", "Calls"],
+  ["apc.html", "APC & fees"],
+  ["authors.html", "Guide for authors"],
+  ["board.html", "Board"],
+  ["editorial-office.html", "Editorial Office"],
+  ["submit.html", "Submit"],
+  ["contact.html", "Contact"]
+];
   const here = (location.pathname.split("/").pop() || "index.html");
 
   function header() {
@@ -19,7 +20,7 @@
     <div class="topbar">
       <div class="wrap">
         <div>Open access · CC BY 4.0 · English only</div>
-        <div><a href="register.html">Register / Login</a> · <a href="contact.html">Editorial office</a></div>
+        <div><a href="register.html">Register / Login</a> · <a href="editorial-office.html">Editorial office</a></div>
       </div>
     </div>
     <div class="issn-bar">
@@ -59,7 +60,7 @@
         <div>
           <h4>Aquaculture Scientific</h4>
           <p>International open-access journal for fisheries, aquaculture and aquatic resources. Editorial office in Porto Alegre, Brazil.</p>
-          <p>Rua Tocantins, — Agronomia<br>
+          <p>Rua Tocantins, 170— Agronomia<br>
           Porto Alegre, RS, 91540-420, Brazil</p>
         </div>
         <div>
@@ -73,9 +74,10 @@
         <div>
           <h4>Journal</h4>
           <p><a href="aims.html">Aims &amp; scope</a><br>
-          <a href="subjects.html">Browse subjects</a><br>
-          <a href="apc.html">APC &amp; fees</a><br>
-          <a href="board.html">Editorial board</a></p>
+           <a href="subjects.html">Browse subjects</a><br>
+           <a href="apc.html">APC &amp; fees</a><br>
+           <a href="board.html">Editorial board</a><br>
+           <a href="editorial-office.html">Editorial Office</a></p>
         </div>
         <div>
           <h4>Contact</h4>
