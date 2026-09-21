@@ -59,7 +59,8 @@
         <div>
           <h4>Aquaculture Scientific</h4>
           <p>International open-access journal for fisheries, aquaculture and aquatic resources. Editorial office in Porto Alegre, Brazil.</p>
-          <p>Av. Ipiranga, 6681 — Partenon<br>Porto Alegre, RS, 90619-900, Brazil</p>
+          <p>Rua Tocantins, 170 — Agronomia<br>
+          Porto Alegre, RS, 91540-420, Brazil</p>
         </div>
         <div>
           <h4>Authors</h4>
@@ -80,7 +81,7 @@
           <h4>Contact</h4>
           <p>editor@aquaculturescientific.com<br>
           submissions@aquaculturescientific.com<br>
-          +55 (51) 3300-0000</p>
+          +55 (51) 98213-6091</p>
         </div>
       </div>
       <div class="wrap legal">
