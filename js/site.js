@@ -59,7 +59,7 @@
         <div>
           <h4>Aquaculture Scientific</h4>
           <p>International open-access journal for fisheries, aquaculture and aquatic resources. Editorial office in Porto Alegre, Brazil.</p>
-          <p>Rua Tocantins, 170 — Agronomia<br>
+          <p>Rua Tocantins, — Agronomia<br>
           Porto Alegre, RS, 91540-420, Brazil</p>
         </div>
         <div>
