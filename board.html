@@ -96,34 +96,34 @@
 
 
     <!-- Editorial Roles -->
-    <form class="card" data-form>
-      <h3>Apply for an editorial role</h3>
+    <form class="card" action="https://formspree.io/f/xbglozqe" method="POST">
 
-      <label>Name</label>
-      <input required>
+    <h3>Apply for an editorial role</h3>
 
-      <label>Email</label>
-      <input type="email" required>
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name" required>
 
-      <label>Role sought</label>
-      <select>
-        <option>Section editor</option>
-        <option>Associate editor</option>
-        <option>Reviewer</option>
-        <option>Guest editor, special issue</option>
-      </select>
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" required>
 
-      <label>Expertise (5–8 keywords)</label>
-      <textarea></textarea>
+    <label for="role">Role sought</label>
+    <select id="role" name="role" required>
+        <option value="Section editor">Section editor</option>
+        <option value="Associate editor">Associate editor</option>
+        <option value="Reviewer">Reviewer</option>
+        <option value="Guest editor, special issue">Guest editor, special issue</option>
+    </select>
 
-      <p>
-        <button class="cta navy" type="submit">
-          Send application
-        </button>
-      </p>
+    <label for="expertise">Expertise (5–8 keywords)</label>
+    <textarea id="expertise" name="expertise" required></textarea>
 
-      <div class="okbox form-result" hidden></div>
-    </form>
+    <input type="hidden" name="subject" value="New Editorial Role Application - Aquaculture Scientific">
+
+    <p>
+        <button class="cta navy" type="submit">Send application</button>
+    </p>
+
+</form>
 
   </div>
 </section>
