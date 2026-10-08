@@ -58,9 +58,8 @@
 
     <div class="issn-bar">
       <div class="wrap">
-        <div>ISSN (print): <b>****-****</b></div>
-        <div>ISSN (online): <b>****-****</b></div>
-        <div>International</div>
+        <div>ISSN (online): <b>3086-8181</b></div>
+              <div>International</div>
       </div>
     </div>
 
