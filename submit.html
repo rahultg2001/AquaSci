@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Submit manuscript | Aquaculture Scientific</title>
+  <title>Submit Manuscript | Aquaculture Scientific</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap"
         rel="stylesheet">
@@ -19,13 +19,14 @@
 <div class="page-hero">
   <div class="wrap">
     <h2>Submit manuscript</h2>
-    <p>English-language papers only. Please use the official Word template.</p>
+    <p>English-language submissions only. Please use the official Word template.</p>
   </div>
 </div>
 
 <section class="section">
   <div class="wrap grid-2">
 
+    <!-- Connected to the PHP email submission handler -->
     <form
       class="card"
       action="submit.php"
@@ -35,7 +36,7 @@
 
       <h3>Submission form</h3>
       <p class="hint">
-        Complete the form and upload your manuscript in Word format.
+        Complete all required fields and upload your manuscript in Word format.
       </p>
 
       <div class="form-row">
@@ -97,37 +98,37 @@
       <label for="article-type">Article type *</label>
       <select id="article-type" name="type" required>
         <option value="">Select type</option>
-        <option>Original research</option>
-        <option>Long review / monograph article</option>
-        <option>Review / systematic review</option>
-        <option>Book chapter</option>
-        <option>Methods / protocol</option>
-        <option>Case study</option>
-        <option>Data paper</option>
-        <option>Short communication</option>
-        <option>Extension / practice paper</option>
-        <option>Technical note</option>
-        <option>Perspective / opinion</option>
-        <option>Brief report</option>
-        <option>Popular article</option>
-        <option>Photo note / illustrated note</option>
-        <option>Comment / correspondence</option>
-        <option>Other (describe in cover letter)</option>
+        <option value="Original research">Original research</option>
+        <option value="Long review / monograph article">Long review / monograph article</option>
+        <option value="Review / systematic review">Review / systematic review</option>
+        <option value="Book chapter">Book chapter</option>
+        <option value="Methods / protocol">Methods / protocol</option>
+        <option value="Case study">Case study</option>
+        <option value="Data paper">Data paper</option>
+        <option value="Short communication">Short communication</option>
+        <option value="Extension / practice paper">Extension / practice paper</option>
+        <option value="Technical note">Technical note</option>
+        <option value="Perspective / opinion">Perspective / opinion</option>
+        <option value="Brief report">Brief report</option>
+        <option value="Popular article">Popular article</option>
+        <option value="Photo note / illustrated note">Photo note / illustrated note</option>
+        <option value="Comment / correspondence">Comment / correspondence</option>
+        <option value="Other">Other (describe in cover letter)</option>
       </select>
 
       <label for="primary-subject">Primary subject *</label>
       <select id="primary-subject" name="subject" required>
         <option value="">Select subject</option>
-        <option>Freshwater aquaculture</option>
-        <option>Mariculture</option>
-        <option>Shrimp and crustaceans</option>
-        <option>Fish nutrition and feed</option>
-        <option>Aquatic animal health</option>
-        <option>Genetics and breeding</option>
-        <option>RAS and engineering</option>
-        <option>Capture fisheries</option>
-        <option>Socioeconomics</option>
-        <option>Other fisheries field</option>
+        <option value="Freshwater aquaculture">Freshwater aquaculture</option>
+        <option value="Mariculture">Mariculture</option>
+        <option value="Shrimp and crustaceans">Shrimp and crustaceans</option>
+        <option value="Fish nutrition and feed">Fish nutrition and feed</option>
+        <option value="Aquatic animal health">Aquatic animal health</option>
+        <option value="Genetics and breeding">Genetics and breeding</option>
+        <option value="RAS and engineering">RAS and engineering</option>
+        <option value="Capture fisheries">Capture fisheries</option>
+        <option value="Socioeconomics">Socioeconomics</option>
+        <option value="Other fisheries field">Other fisheries field</option>
       </select>
 
       <label for="manuscript-title">Manuscript title *</label>
@@ -136,16 +137,16 @@
         type="text"
         name="title"
         required
-        placeholder="Full manuscript title"
+        placeholder="Enter the full manuscript title"
       >
 
       <label for="abstract">Abstract *</label>
       <textarea
         id="abstract"
         name="abstract"
-        required
         rows="6"
-        placeholder="Enter your abstract"
+        required
+        placeholder="Enter your abstract. Follow the relevant author guidelines."
       ></textarea>
 
       <label for="cover-letter">Cover letter</label>
@@ -153,7 +154,7 @@
         id="cover-letter"
         name="cover"
         rows="5"
-        placeholder="Explain why this paper fits Aquaculture Scientific"
+        placeholder="Explain why this manuscript fits Aquaculture Scientific."
       ></textarea>
 
       <label for="manuscript-file">Manuscript (.doc or .docx) *</label>
@@ -179,8 +180,8 @@
           style="width:auto; margin-top:4px;"
         >
         <span>
-          I confirm the work is original, written in English, and not under
-          review elsewhere. *
+          I confirm that this work is original, written in English, and not
+          under review elsewhere. *
         </span>
       </label>
 
@@ -198,10 +199,13 @@
         <p>
           1. Download the
           <a href="templates/AS-manuscript-template.docx">
-            Word template
+            official Word template
           </a>.<br><br>
+
           2. Follow the article-type guidelines.<br><br>
-          3. Include the required ethics and data statements.<br><br>
+
+          3. Include the required ethics and data availability statements.<br><br>
+
           4. All submissions are subject to editorial assessment.
         </p>
       </div>
