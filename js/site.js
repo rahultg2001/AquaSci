@@ -252,8 +252,7 @@
 
       <div class="wrap legal">
 
-        ISSN (print) ****-**** ·
-        ISSN (online) ****-****.
+        ISSN (online) 3086-8181.
         © 2026 Aquaculture Scientific.
         Licensed under CC BY 4.0.
 
