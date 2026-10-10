@@ -1,1 +1,0 @@
-PHPMailer is an external dependency and is not bundled in this archive. Download the official release from https://github.com/PHPMailer/PHPMailer/releases, extract it, and copy src/Exception.php, src/PHPMailer.php, and src/SMTP.php into this directory before deploying. Verify licenses and use a current maintained release.
