@@ -15,7 +15,8 @@
     ["/authors", "Guide for authors"],
     ["/board", "Board"],
     ["/editorial-office", "Editorial Office"],
-    ["/submit", "Submit"],
+    ["/submit.php", "Submit manuscript"],
+    ["/dashboard.php", "My submissions"],
     ["/contact", "Contact"]
   ];
 
@@ -48,7 +49,9 @@
         <div>Open access · CC BY 4.0 · English only</div>
 
         <div>
-          <a href="/register">Register / Login</a>
+          <a href="/register.php">Author registration</a>
+          ·
+          <a href="/login.php">Login</a>
           ·
           <a href="/editorial-office">Editorial office</a>
         </div>
@@ -90,7 +93,7 @@
             Menu
           </button>
 
-          <a class="cta" href="/submit">
+          <a class="cta" href="/submit.php">
             Submit manuscript
           </a>
 
@@ -318,7 +321,7 @@
 
           box.hidden = false;
 
-          box.textContent = "Official Webside";
+          box.textContent = "This contact form is a demonstration and is not connected to email yet. Please use the contact details listed on this page.";
 
         }
 

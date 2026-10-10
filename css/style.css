@@ -270,3 +270,19 @@ footer a { color: #d7eef7; }
   nav.main .wrap { display: none; }
   nav.main.open .wrap { display: flex; flex-direction: column; }
 }
+
+/* Author portal additions */
+.status-pill {
+  display: inline-block;
+  border: 1px solid #b8d2dc;
+  border-radius: 999px;
+  padding: 3px 10px;
+  background: #eef7fa;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 700;
+}
+.table-wrap { width: 100%; overflow-x: auto; }
+.table-wrap table { min-width: 640px; }
+form button { cursor: pointer; }
+input:disabled { background: #f3f6f8; color: #51616b; }

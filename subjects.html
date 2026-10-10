@@ -41,7 +41,7 @@ const items = [
 ];
 document.getElementById("subs").innerHTML = items.map(([t,d]) => {
   const id = t.toLowerCase().replace(/[^a-z]+/g,"-");
-  return `<article class="card subject" id="${id}"><h3>${t}</h3><p>${d}</p><p><a href="submit.html">Submit in this field</a></p></article>`;
+  return `<article class="card subject" id="${id}"><h3>${t}</h3><p>${d}</p><p><a href="/submit.php">Submit in this field</a></p></article>`;
 }).join("");
 </script>
 </body></html>
