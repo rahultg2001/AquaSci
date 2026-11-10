@@ -1,113 +1,99 @@
-(function () {
-  const pages = [
-  ["index.html", "Home"],
-  ["aims.html", "Aims & scope"],
-  ["article-types.html", "Article types"],
-  ["subjects.html", "Subjects"],
-  ["issues.html", "Articles"],
-  ["calls.html", "Calls"],
-  ["apc.html", "APC & fees"],
-  ["authors.html", "Guide for authors"],
-  ["board.html", "Board"],
-  ["editorial-office.html", "Editorial Office"],
-  ["submit.html", "Submit"],
-  ["contact.html", "Contact"]
-];
-  const here = (location.pathname.split("/").pop() || "index.html");
-
-  function header() {
-    return `
-    <div class="topbar">
-      <div class="wrap">
-        <div>Open access · CC BY 4.0 · English only</div>
-        <div><a href="register.html">Register / Login</a> · <a href="editorial-office.html">Editorial office</a></div>
-      </div>
-    </div>
-    <div class="issn-bar">
-      <div class="wrap">
-        <div>ISSN (online): <b>3086-8181</b></div>
-        <div>International</div>
-      </div>
-    </div>
-    <div class="brand-row">
-      <div class="wrap">
-        <a class="brand" href="index.html">
-          <img src="assets/logo.jpg" alt="Aquaculture Scientific logo">
-          <div>
-            <h1>Aquaculture Scientific</h1>
-            <p>An international journal</p>
-          </div>
-        </a>
-        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-          <button class="mobile-toggle" id="navToggle" type="button">Menu</button>
-          <a class="cta" href="submit.html">Submit manuscript</a>
-        </div>
-      </div>
-    </div>
-    <nav class="main" id="mainNav">
-      <div class="wrap">
-        ${pages.map(([href, label]) => `<a href="${href}" class="${here===href?"active":""}">${label}</a>`).join("")}
-      </div>
-    </nav>
-    <div class="promo">100% APC waiver on every article type until 31 December 2026</div>`;
+(() => {
+  'use strict';
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('siteNavMenu');
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    toggle.setAttribute('aria-expanded', String(open));
+    menu.classList.toggle('pkp_site_nav_menu--isOpen', open);
+    toggle.querySelector('span').textContent = open ? 'Close Menu' : 'Open Menu';
+  });
+  const about = document.getElementById('aboutToggle');
+  function closeAbout() {
+    about?.setAttribute('aria-expanded', 'false');
+    about?.parentElement.classList.remove('is-open');
   }
-
-  function footer() {
-    return `
-    <footer>
-      <div class="wrap foot-grid">
-        <div>
-          <h4>Aquaculture Scientific</h4>
-          <p>International open-access journal for fisheries, aquaculture and aquatic resources. Editorial office in Porto Alegre, Brazil.</p>
-          <p>Rua Tocantins, 170— Agronomia<br>
-          Porto Alegre, RS, 91540-420, Brazil</p>
-        </div>
-        <div>
-          <h4>Authors</h4>
-          <p><a href="authors.html">Guide for authors</a><br>
-          <a href="templates/AS-manuscript-template.docx">Word template</a><br>
-          <a href="article-types.html">Article types</a><br>
-          <a href="calls.html">Call for papers</a><br>
-          <a href="ethics.html">Publication ethics</a></p>
-        </div>
-        <div>
-          <h4>Journal</h4>
-          <p><a href="aims.html">Aims &amp; scope</a><br>
-           <a href="subjects.html">Browse subjects</a><br>
-           <a href="apc.html">APC &amp; fees</a><br>
-           <a href="board.html">Editorial board</a><br>
-           <a href="editorial-office.html">Editorial Office</a></p>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <p>editor@aquaculturescientific.com<br>
-          submissions@aquaculturescientific.com<br>
-          +55 (51) 98213-6091</p>
-        </div>
-      </div>
-      <div class="wrap legal">
-        ISSN (online) 3086-8181 · ISSN-L(online) 3086-8181.
-        © 2026 Aquaculture Scientific. Licensed under CC BY 4.0.
-      </div>
-    </footer>`;
-  }
-
-  const h = document.getElementById("site-header");
-  const f = document.getElementById("site-footer");
-  if (h) h.innerHTML = header();
-  if (f) f.innerHTML = footer();
-  const btn = document.getElementById("navToggle");
-  if (btn) btn.addEventListener("click", () => document.getElementById("mainNav").classList.toggle("open"));
-
-  document.querySelectorAll("[data-form]").forEach((form) => {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const box = form.querySelector(".form-result");
-      if (box) {
-        box.hidden = false;
-        box.textContent = "Official Webside";
+  about?.addEventListener('click', () => {
+    const open = about.getAttribute('aria-expanded') !== 'true';
+    about.setAttribute('aria-expanded', String(open));
+    about.parentElement.classList.toggle('is-open', open);
+  });
+  document.addEventListener('click', event => {
+    if (!about?.parentElement.contains(event.target)) closeAbout();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      closeAbout();
+      if (menu?.classList.contains('pkp_site_nav_menu--isOpen')) {
+        toggle.click();
+        toggle.focus();
       }
-      form.reset();
+    }
+  });
+  const current = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('#navigationPrimary a').forEach(link => {
+    if (link.getAttribute('href') === current) link.setAttribute('aria-current', 'page');
+  });
+  document.querySelectorAll('table').forEach(table => {
+    if (table.parentElement.classList.contains('table-scroll')) return;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'table-scroll';
+    wrapper.setAttribute('role', 'region');
+    wrapper.setAttribute('aria-label', 'Scrollable data table');
+    wrapper.tabIndex = 0;
+    table.before(wrapper);
+    wrapper.append(table);
+  });
+  // Associate the original journal's labels with their controls.
+  document.querySelectorAll('form label:not([for])').forEach((label, i) => {
+    const field = label.nextElementSibling;
+    if (field?.matches('input,select,textarea')) {
+      field.id ||= 'journal-field-' + i;
+      label.htmlFor = field.id;
+    }
+  });
+  document.querySelectorAll('form[data-email-form]').forEach(form => {
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const parts = [];
+      form.querySelectorAll('input,select,textarea').forEach(field => {
+        if (field.type === 'hidden' || field.type === 'submit') return;
+        const label = field.labels?.[0]?.textContent.trim() || field.name || 'Details';
+        parts.push(label + ': ' + field.value.trim());
+      });
+      const subject = current === 'board.html' ? 'Editorial role application — Aquaculture Scientific' : 'Editorial office enquiry — Aquaculture Scientific';
+      const href = 'mailto:editor@aquaculturescientific.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(parts.join('\n\n'));
+      let result = form.querySelector('.form-result');
+      if (!result) {
+        result = document.createElement('p');
+        form.append(result);
+      }
+      result.replaceChildren();
+      const message = document.createElement('p');
+      message.textContent = 'Your email draft is ready. Review it and send it from your email app.';
+      const link = document.createElement('a');
+      link.href = href;
+      link.textContent = 'Open email draft';
+      result.append(message, link);
+      result.hidden = false;
+      location.href = href;
+    });
+  });
+  const title = 'In silico analysis of novel Triacontafluoropentadec-1-ene as a sustainable replacement for dodecane in fisheries microplastics: Molecular docking, dynamics simulation and pharmacophore studies of acetylcholinesterase activity';
+  const authors = ['Thakur, Rahul', 'Joshi, Vibhor', 'Sahoo, Ganesh Chandra', 'Tiwari, Rajnarayan R.', 'Rana, Sindhuprava'];
+  document.querySelectorAll('.citation-download').forEach(button => {
+    button.addEventListener('click', () => {
+      const format = button.dataset.format;
+      const content = format === 'ris'
+        ? ['TY  - JOUR', ...authors.map(a => 'AU  - ' + a), 'TI  - ' + title, 'JO  - Aquaculture Scientific', 'PY  - 2026', 'VL  - 1', 'IS  - 1', 'M1  - AS2026-001', 'N1  - Sample article supplied with the journal website', 'ER  - ', ''].join('\r\n')
+        : '@article{Thakur2026Sample,\n  title = {' + title + '},\n  author = {' + authors.join(' and ') + '},\n  journal = {Aquaculture Scientific},\n  year = {2026},\n  volume = {1},\n  number = {1},\n  note = {AS2026-001; Sample article}\n}\n';
+      const url = URL.createObjectURL(new Blob([content], {type:'text/plain;charset=utf-8'}));
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'AS2026-001.' + format;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
     });
   });
 })();
