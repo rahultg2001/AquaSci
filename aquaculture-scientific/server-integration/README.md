@@ -1,1 +1,0 @@
-Original PHP helper files retained from the uploaded source. The account pages, schema, mailer dependency and complete account backend were not supplied. Keep server configuration and credentials outside the public web root. The redesigned static website uses the existing Formspree-and-email submission flow.
